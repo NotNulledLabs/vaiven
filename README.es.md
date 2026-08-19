@@ -5,7 +5,7 @@
 Un traductor bidireccional que vive dentro de un proyecto de Claude. Un archivo,
 copiado y pegado. Sin código, sin instalar nada, sin ejecutar nada.
 
-![Un chat donde un mensaje en inglés australiano vuelve en español, y la respuesta en español sale en inglés australiano](pivot.png)
+![Un chat donde un mensaje en inglés australiano vuelve en español, y la respuesta en español sale en inglés australiano](docs/pivot.png)
 
 Toda esa conversación es un solo chat, sin tipear ningún código. Deduce para qué
 lado traducir según el idioma en que está escrito cada mensaje.
@@ -143,7 +143,7 @@ muestra en tu propio idioma qué dice literalmente tu mensaje traducido, que es 
 bien. Sobre algo que recibiste, te muestra el fraseo original debajo de la
 traducción natural, así ves cómo estaba armada la oración.
 
-![Un mensaje traducido al inglés con una traducción literal de vuelta al español debajo](check.png)
+![Un mensaje traducido al inglés con una traducción literal de vuelta al español debajo](docs/check.png)
 
 Las notas y los chequeos siempre vuelven en tu idioma, nunca en el destino. Son
 para vos, no para quien recibe el mensaje.
@@ -166,7 +166,7 @@ trabajo se asume que es algo que recibiste, porque es lo que es casi siempre.
 pantalla, y vuelve cada mensaje traducido en orden, con quién habló y los horarios
 intactos.
 
-![Un log de chat de tres mensajes traducido conservando quién habló, después un mensaje mandado a portugués brasileño, y después el reset](threadpluschangelang.png)
+![Un log de chat de tres mensajes traducido conservando quién habló, después un mensaje mandado a portugués brasileño, y después el reset](docs/commands.png)
 
 Arriba hay tres cosas seguidas: una conversación pegada, un mensaje mandado a otro
 idioma, y `/reset` devolviendo el destino al original. Cualquiera de estos puede
@@ -179,7 +179,7 @@ la traducción sin describirte la imagen. Menús, carteles en la calle, formular
 cartas, etiquetas de productos. Sirve cuando estás parado en algún lugar y
 necesitás saber qué dice algo.
 
-![Un menú fotografiado devuelto como texto traducido, con sus secciones y precios intactos](photo.png)
+![Un menú fotografiado devuelto como texto traducido, con sus secciones y precios intactos](docs/photo.png)
 
 La estructura se mantiene, así que un menú vuelve como menú y no como un párrafo.
 

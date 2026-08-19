@@ -5,7 +5,7 @@
 A two-way translator that lives inside a Claude project. One file, copied and
 pasted. No code, nothing to install, nothing to run.
 
-![A chat where a message in Australian English comes back in Spanish, and the reply in Spanish goes out in Australian English](pivot.png)
+![A chat where a message in Australian English comes back in Spanish, and the reply in Spanish goes out in Australian English](docs/pivot.png)
 
 The whole conversation above, in one chat, with no codes typed. It works out which
 way to translate from the language each message is written in.
@@ -138,7 +138,7 @@ only way to be sure about something important in a language you cannot read well
 yet. On something you received, it shows the original phrasing underneath the
 natural translation, so you can see how the sentence was actually built.
 
-![A message translated into English with a literal translation back into Spanish underneath it](check.png)
+![A message translated into English with a literal translation back into Spanish underneath it](docs/check.png)
 
 Notes and checks always come back in your language, never in the target. They are
 for you, not for the person receiving the message.
@@ -162,7 +162,7 @@ always is.
 screenshot of one, and every message comes back translated in order with the
 speakers and times intact.
 
-![A pasted three-person chat log translated with speakers intact, then a message sent to Brazilian Portuguese, then reset back](threadpluschangelang.png)
+![A pasted three-person chat log translated with speakers intact, then a message sent to Brazilian Portuguese, then reset back](docs/commands.png)
 
 Three things in a row above: a pasted conversation, a single message sent somewhere
 else, and `/reset` bringing the target back. Any of these can carry text in the
@@ -175,7 +175,7 @@ back the translation with no description of the picture. Menus, street signs,
 forms, letters, labels on packaging. Useful when you are standing somewhere and
 need to know what something says.
 
-![A photographed menu returned as translated text with its sections and prices intact](photo.png)
+![A photographed menu returned as translated text with its sections and prices intact](docs/photo.png)
 
 Structure survives, so a menu comes back as a menu rather than a paragraph.
 
