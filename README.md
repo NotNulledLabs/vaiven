@@ -31,7 +31,7 @@ forth motion, which is the whole idea.
 
 1. In Claude, create a new Project. Any name.
 2. Open its instructions.
-3. Copy everything in [VAIVEN.md](VAIVEN.md) and paste it there.
+3. Copy everything in [VAIVEN.txt](VAIVEN.txt) and paste it there.
 4. Fill in the two lines marked REQUIRED. Delete the brackets along with the
    placeholder text, so only your language is left after the colon:
 

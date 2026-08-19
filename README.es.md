@@ -31,7 +31,7 @@ el movimiento de ida y vuelta.
 
 1. En Claude, creá un proyecto nuevo. Con cualquier nombre.
 2. Abrí sus instrucciones.
-3. Copiá todo lo que hay en [VAIVEN.md](VAIVEN.md) y pegalo ahí.
+3. Copiá todo lo que hay en [VAIVEN.txt](VAIVEN.txt) y pegalo ahí.
 4. Completá las dos líneas marcadas REQUIRED. Borrá los corchetes junto con el
    texto de ejemplo, así después de los dos puntos queda solo tu idioma:
 
