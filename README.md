@@ -5,6 +5,11 @@
 A two-way translator that lives inside a Claude project. One file, copied and
 pasted. No code, nothing to install, nothing to run.
 
+![A chat where a message in Australian English comes back in Spanish, and the reply in Spanish goes out in Australian English](pivot.png)
+
+The whole conversation above, in one chat, with no codes typed. It works out which
+way to translate from the language each message is written in.
+
 ## The problem it solves
 
 Most translation prompts only go one way. You name a language, you paste your
@@ -52,19 +57,10 @@ step 4 yourself. Until you do, every new chat will ask again.
 That is all of it. Write the languages however feels natural. "Spanish (Mexico)",
 "German", "French (Quebec)", "Brazilian Portuguese" all work.
 
-Here is what it looks like once it is running, with English as your language and
-Portuguese as your working language. You type nothing but the text itself.
-
-```
-You:     Oi, tudo bem? Cheguei ontem, podemos conversar amanhã?
-Vaivén:  Hi, how are you? I got in yesterday, can we talk tomorrow?
-
-You:     Sure, does eleven work for you?
-Vaivén:  Claro, onze horas funciona pra você?
-```
-
-Same project, same chat, no codes. It saw that the first message was not in your
-language and turned it around.
+One setting worth changing. In the chat where you use the project, turn extended
+thinking off. Translating is a direct task and does not need it, and leaving it on
+adds a delay before every reply. The setting applies to that chat only and changes
+nothing about your other conversations in Claude.
 
 ## Using it
 
@@ -142,6 +138,8 @@ only way to be sure about something important in a language you cannot read well
 yet. On something you received, it shows the original phrasing underneath the
 natural translation, so you can see how the sentence was actually built.
 
+![A message translated into English with a literal translation back into Spanish underneath it](check.png)
+
 Notes and checks always come back in your language, never in the target. They are
 for you, not for the person receiving the message.
 
@@ -164,12 +162,22 @@ always is.
 screenshot of one, and every message comes back translated in order with the
 speakers and times intact.
 
+![A pasted three-person chat log translated with speakers intact, then a message sent to Brazilian Portuguese, then reset back](threadpluschangelang.png)
+
+Three things in a row above: a pasted conversation, a single message sent somewhere
+else, and `/reset` bringing the target back. Any of these can carry text in the
+same message.
+
 ## Photos
 
 Send a photo instead of text and it reads whatever is written in it, then hands
 back the translation with no description of the picture. Menus, street signs,
 forms, letters, labels on packaging. Useful when you are standing somewhere and
 need to know what something says.
+
+![A photographed menu returned as translated text with its sections and prices intact](photo.png)
+
+Structure survives, so a menu comes back as a menu rather than a paragraph.
 
 For a screenshot of a conversation, use `/thread` so the speakers are kept
 separate.

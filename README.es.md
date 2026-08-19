@@ -5,6 +5,11 @@
 Un traductor bidireccional que vive dentro de un proyecto de Claude. Un archivo,
 copiado y pegado. Sin código, sin instalar nada, sin ejecutar nada.
 
+![Un chat donde un mensaje en inglés australiano vuelve en español, y la respuesta en español sale en inglés australiano](pivot.png)
+
+Toda esa conversación es un solo chat, sin tipear ningún código. Deduce para qué
+lado traducir según el idioma en que está escrito cada mensaje.
+
 ## El problema que resuelve
 
 Casi todos los prompts de traducción van en una sola dirección. Nombrás un idioma,
@@ -27,12 +32,15 @@ el movimiento de ida y vuelta.
 1. En Claude, creá un proyecto nuevo. Con cualquier nombre.
 2. Abrí sus instrucciones.
 3. Copiá todo lo que hay en [VAIVEN.md](VAIVEN.md) y pegalo ahí.
-4. Completá las dos líneas marcadas REQUIRED, reemplazando los corchetes. En
-   palabras comunes, con el país entre paréntesis si la variante te importa:
+4. Completá las dos líneas marcadas REQUIRED. Borrá los corchetes junto con el
+   texto de ejemplo, así después de los dos puntos queda solo tu idioma:
 
 ```
-I read in: [ your language ]        ->   I read in: Spanish (Argentina)
-I write to: [ the language you write to ]   ->   I write to: Portuguese (Brazil)
+antes    I read in: [ delete this and write your language ]
+después  I read in: Spanish (Argentina)
+
+antes    I write to: [ delete this and write your language ]
+después  I write to: Portuguese (Brazil)
 ```
 
 5. Guardá, abrí un chat dentro de ese proyecto y escribí `/help`. Te va a decir
@@ -52,19 +60,10 @@ Eso es todo. Escribí los idiomas como te salga natural. "Spanish (Mexico)",
 los idiomas van en inglés porque el motor está escrito en inglés, pero Claude te va
 a responder siempre en el tuyo.
 
-Así se ve funcionando, con español como tu idioma y portugués como idioma de
-trabajo. No tipeás nada más que el texto.
-
-```
-Vos:     Oi, tudo bem? Cheguei ontem, podemos conversar amanhã?
-Vaivén:  Hola, ¿todo bien? Llegué ayer, ¿podemos hablar mañana?
-
-Vos:     Claro, ¿te sirve a las once?
-Vaivén:  Claro, onze horas funciona pra você?
-```
-
-Mismo proyecto, mismo chat, sin códigos. Vio que el primer mensaje no estaba en tu
-idioma y lo dio vuelta.
+Un ajuste que conviene cambiar. En la pestaña donde uses el proyecto, desactivá el
+pensamiento extendido. Traducir es una tarea directa y no lo necesita, y dejarlo
+prendido le suma una demora antes de cada respuesta. El ajuste vale solo para esa
+conversación y no cambia nada en el resto de tus chats de Claude.
 
 ## Cómo se usa
 
@@ -144,6 +143,8 @@ muestra en tu propio idioma qué dice literalmente tu mensaje traducido, que es 
 bien. Sobre algo que recibiste, te muestra el fraseo original debajo de la
 traducción natural, así ves cómo estaba armada la oración.
 
+![Un mensaje traducido al inglés con una traducción literal de vuelta al español debajo](check.png)
+
 Las notas y los chequeos siempre vuelven en tu idioma, nunca en el destino. Son
 para vos, no para quien recibe el mensaje.
 
@@ -165,12 +166,22 @@ trabajo se asume que es algo que recibiste, porque es lo que es casi siempre.
 pantalla, y vuelve cada mensaje traducido en orden, con quién habló y los horarios
 intactos.
 
+![Un log de chat de tres mensajes traducido conservando quién habló, después un mensaje mandado a portugués brasileño, y después el reset](threadpluschangelang.png)
+
+Arriba hay tres cosas seguidas: una conversación pegada, un mensaje mandado a otro
+idioma, y `/reset` devolviendo el destino al original. Cualquiera de estos puede
+llevar texto en el mismo mensaje.
+
 ## Fotos
 
 Mandá una foto en lugar de texto y lee lo que esté escrito ahí, después te devuelve
 la traducción sin describirte la imagen. Menús, carteles en la calle, formularios,
 cartas, etiquetas de productos. Sirve cuando estás parado en algún lugar y
 necesitás saber qué dice algo.
+
+![Un menú fotografiado devuelto como texto traducido, con sus secciones y precios intactos](photo.png)
+
+La estructura se mantiene, así que un menú vuelve como menú y no como un párrafo.
 
 Si es una captura de una conversación, usá `/thread` para que mantenga separado a
 cada uno.
