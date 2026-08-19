@@ -27,12 +27,15 @@ forth motion, which is the whole idea.
 1. In Claude, create a new Project. Any name.
 2. Open its instructions.
 3. Copy everything in [VAIVEN.md](VAIVEN.md) and paste it there.
-4. Fill in the two lines marked REQUIRED, replacing the brackets. Plain words,
-   with a country in brackets if the variant matters to you:
+4. Fill in the two lines marked REQUIRED. Delete the brackets along with the
+   placeholder text, so only your language is left after the colon:
 
 ```
-I read in: [ your language ]        ->   I read in: Hindi
-I write to: [ the language you write to ]   ->   I write to: English (India)
+before   I read in: [ delete this and write your language ]
+after    I read in: Hindi
+
+before   I write to: [ delete this and write your language ]
+after    I write to: English (India)
 ```
 
 5. Save, open a chat inside that project, and type `/help`. It will tell you
